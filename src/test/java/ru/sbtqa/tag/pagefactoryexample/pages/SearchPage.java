@@ -1,11 +1,13 @@
 package ru.sbtqa.tag.pagefactoryexample.pages;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.FindBy;
 import ru.sbtqa.tag.pagefactory.Page;
 import ru.sbtqa.tag.pagefactory.annotations.ActionTitle;
 import ru.sbtqa.tag.pagefactory.annotations.ElementTitle;
 import ru.sbtqa.tag.pagefactory.PageFactory;
 import ru.sbtqa.tag.pagefactory.annotations.PageEntry;
+import ru.sbtqa.tag.pagefactory.annotations.RedirectsTo;
 import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.element.Image;
 import ru.yandex.qatools.htmlelements.element.TextInput;
@@ -28,15 +30,21 @@ public class SearchPage extends Page {
 
     @ElementTitle("Поиск в Google")
     @FindBy(name = "btnK")
-    public Button startSearching;
+    public Button searchAtGoogle;
+
+    @ElementTitle("Поиск")
+    @FindBy(name = "btnG")
+    @RedirectsTo(page = ResultsPage.class)
+    public Button searchLoupe;
 
     public SearchPage(){
-        PageFactory.initElements(new HtmlElementDecorator(new HtmlElementLocatorFactory(PageFactory.getDriver())), this);
+        PageFactory.initElements(new HtmlElementDecorator(
+                new HtmlElementLocatorFactory(PageFactory.getDriver())), this);
     }
 
     @ActionTitle("ищет")
     public void startSearching(String searchText){
         search.sendKeys(searchText);
-        startSearching.click();
+        search.sendKeys(Keys.ENTER);
     }
 }

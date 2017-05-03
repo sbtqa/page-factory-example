@@ -14,6 +14,4 @@ import ru.sbtqa.tag.cucumber.TagCucumber;
         features = {"src/test/resources/features/"},
         tags = {"@test"})
 
-public class CucumberTest {
-
-}
+public class CucumberTest {}
