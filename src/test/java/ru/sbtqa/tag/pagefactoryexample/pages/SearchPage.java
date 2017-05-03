@@ -9,6 +9,8 @@ import ru.sbtqa.tag.pagefactory.annotations.PageEntry;
 import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.element.Image;
 import ru.yandex.qatools.htmlelements.element.TextInput;
+import ru.yandex.qatools.htmlelements.loader.decorator.HtmlElementDecorator;
+import ru.yandex.qatools.htmlelements.loader.decorator.HtmlElementLocatorFactory;
 
 /**
  * Created by sbt-svetlakov-av on 02.05.17.
@@ -29,7 +31,7 @@ public class SearchPage extends Page {
     public Button startSearching;
 
     public SearchPage(){
-        PageFactory.initElements(PageFactory.getDriver(), this);
+        PageFactory.initElements(new HtmlElementDecorator(new HtmlElementLocatorFactory(PageFactory.getDriver())), this);
     }
 
     @ActionTitle("ищет")

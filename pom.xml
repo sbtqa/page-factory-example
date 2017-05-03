@@ -4,7 +4,7 @@
     <groupId>ru.sbtqa.tag</groupId>
     <artifactId>page-factory-example</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <dependencies>
         <dependency>
             <groupId>ru.sbtqa.tag</groupId>
