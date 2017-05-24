@@ -1,4 +1,4 @@
-package ru.sbtqa.tag.pagefactoryexample.pages;
+package ru.sbtqa.tag.pagefactoryexample.pages.Google;
 
 import org.junit.Assert;
 import org.openqa.selenium.support.FindBy;
