@@ -1,14 +1,15 @@
 package ru.sbtqa.tag.pagefactoryexample.pages.Google;
 
+
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.FindBy;
-import ru.sbtqa.tag.pagefactory.Page;
-import ru.sbtqa.tag.pagefactory.annotations.ActionTitle;
-import ru.sbtqa.tag.pagefactory.annotations.ElementTitle;
 import ru.sbtqa.tag.pagefactory.PageFactory;
-import ru.sbtqa.tag.pagefactory.annotations.PageEntry;
-import ru.sbtqa.tag.pagefactory.annotations.RedirectsTo;
-import ru.sbtqa.tag.pagefactoryexample.pages.Google.ResultsPage;
+import ru.sbtqa.tag.pagefactory.WebElementsPage;
+import ru.sbtqa.tag.pagefactory.maven_artefacts.module_pagefactory_api.Page;
+import ru.sbtqa.tag.pagefactory.maven_artefacts.module_pagefactory_api.annotations.ActionTitle;
+import ru.sbtqa.tag.pagefactory.maven_artefacts.module_pagefactory_api.annotations.ElementTitle;
+import ru.sbtqa.tag.pagefactory.maven_artefacts.module_pagefactory_api.annotations.PageEntry;
+import ru.sbtqa.tag.pagefactory.maven_artefacts.module_pagefactory_api.annotations.RedirectsTo;
 import ru.yandex.qatools.htmlelements.element.Button;
 import ru.yandex.qatools.htmlelements.element.Image;
 import ru.yandex.qatools.htmlelements.element.TextInput;
@@ -19,7 +20,7 @@ import ru.yandex.qatools.htmlelements.loader.decorator.HtmlElementLocatorFactory
  * Created by sbt-svetlakov-av on 02.05.17.
  */
 @PageEntry(title = "Главная страница")
-public class SearchPage extends Page {
+public class SearchPage extends WebElementsPage {
 
     @ElementTitle("Найти")
     @FindBy(id = "lst-ib")

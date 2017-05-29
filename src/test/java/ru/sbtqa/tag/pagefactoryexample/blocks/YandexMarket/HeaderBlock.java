@@ -2,7 +2,7 @@ package ru.sbtqa.tag.pagefactoryexample.blocks.YandexMarket;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.FindBy;
-import ru.sbtqa.tag.pagefactory.annotations.ActionTitle;
+import ru.sbtqa.tag.pagefactory.maven_artefacts.module_pagefactory_api.annotations.ActionTitle;
 import ru.yandex.qatools.htmlelements.annotations.Name;
 import ru.yandex.qatools.htmlelements.element.HtmlElement;
 import ru.yandex.qatools.htmlelements.element.TextInput;
