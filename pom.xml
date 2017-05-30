@@ -13,6 +13,17 @@
             <version>1.4-SNAPSHOT</version>
             <type>jar</type>
         </dependency>
+        <dependency>
+            <groupId>ru.sbtqa.tag.pagefactory</groupId>
+            <artifactId>html-elements-plugin</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>page-factory-api</artifactId>
+                    <groupId>ru.sbtqa.tag.pagefactory</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
