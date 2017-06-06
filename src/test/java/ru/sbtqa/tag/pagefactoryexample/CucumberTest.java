@@ -10,7 +10,7 @@ import ru.sbtqa.tag.cucumber.TagCucumber;
  */
 @RunWith(TagCucumber.class)
 @CucumberOptions(monochrome = true, format = {"pretty"},
-        glue = {"ru.sbtqa.tag.pagefactory.stepdefs", "ru.sbtqa.tag.pagefactory.maven_artefacts.plugin_html_elements.stepDefs"},
+        glue = {"ru.sbtqa.tag.pagefactory.stepdefs", "ru.sbtqa.tag.pagefactory.htmlstepdefs"},
         features = {"src/test/resources/features"},
         tags = {"@gtest"})
 
