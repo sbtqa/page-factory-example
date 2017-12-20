@@ -15,11 +15,11 @@ import ru.yandex.qatools.htmlelements.element.TextInput;
 public class HeaderBlock extends HtmlElement{
 
     @Name("Строка поиска")
-    @FindBy(xpath = "//input[@id='header-search']")
+    @FindBy(xpath = ".//input[@id='header-search']")
     public TextInput searchString;
 
     @Name("Найти")
-    @FindBy(xpath = "//span[text()='Найти']")
+    @FindBy(xpath = ".//span[text()='Найти']")
     public TextInput searchButton;
 
     @ActionTitle("выполняет поиск")
