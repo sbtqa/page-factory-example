@@ -12,6 +12,6 @@ import ru.sbtqa.tag.cucumber.TagCucumber;
 @CucumberOptions(monochrome = true, format = {"pretty"},
         glue = {"ru.sbtqa.tag.pagefactory.stepdefs"},
         features = {"src/test/resources/features/"},
-        tags = {"@ymtest"})
+        tags = {"@gtest"})
 
 public class CucumberTest {}

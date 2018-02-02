@@ -45,6 +45,7 @@ public class SearchPage extends Page {
 
     @ActionTitle("ищет")
     public void startSearching(String searchText){
+//        System.out.println("!" + getElementTitle(searchAtGoogle));
         search.sendKeys(searchText);
         search.sendKeys(Keys.ENTER);
     }

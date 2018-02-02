@@ -11,7 +11,7 @@ import ru.yandex.qatools.htmlelements.loader.decorator.HtmlElementLocatorFactory
 @PageEntry(title = "Яндекс Маркет")
 public class YmMainPage extends Page {
 
-    @ElementTitle("Меню поиска")
+    @ElementTitle("Меню. поиска")
     public HeaderBlock headerBlock;
 
     public YmMainPage() {

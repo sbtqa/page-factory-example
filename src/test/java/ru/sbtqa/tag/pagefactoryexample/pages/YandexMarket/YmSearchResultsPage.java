@@ -15,6 +15,8 @@ import ru.yandex.qatools.htmlelements.loader.decorator.HtmlElementDecorator;
 import ru.yandex.qatools.htmlelements.loader.decorator.HtmlElementLocatorFactory;
 
 import java.util.List;
+import ru.sbtqa.tag.allurehelper.AllureNonCriticalFailure;
+import ru.sbtqa.tag.qautils.errors.AutotestError;
 
 /**
  * Created by sbt-svetlakov-av on 12.05.17.
@@ -37,12 +39,15 @@ public class YmSearchResultsPage extends Page {
     @ActionTitle("проверяет присутствие продукта")
     public void compareProductCost(String productName){
 
-        for (ProductCard card: productCards) {
-            if(productName.toLowerCase().equals(card.getProductName().toLowerCase())){
-                return;
-            }
-        }
+//        for (ProductCard card: productCards) {
+//            if(productName.toLowerCase().equals(card.getProductName().toLowerCase())){
+//                return;
+//            }
+//        }
 
-        Assert.fail("Продукт " + productName +  " не был найден");
+//        Assert.fail("Продукт " + productName +  " не был найден");
+System.out.println("1");
+        AllureNonCriticalFailure.fire(new Throwable("ASD"));
+System.out.println("2");
     }
 }
