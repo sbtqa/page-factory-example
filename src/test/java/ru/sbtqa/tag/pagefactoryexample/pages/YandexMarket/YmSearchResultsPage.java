@@ -25,7 +25,7 @@ public class YmSearchResultsPage extends Page {
     private HeaderBlock headerBlock;
 
     @ElementTitle("Список товаров")
-    @FindBy(xpath = "//div[contains(@class,'n-snippet-card')]")
+    @FindBy(xpath = ".//div[contains(@class,'n-snippet-card2 ')]")
     private List<ProductCard> productCards;
 
     public YmSearchResultsPage(){
@@ -38,7 +38,7 @@ public class YmSearchResultsPage extends Page {
     public void compareProductCost(String productName){
 
         for (ProductCard card: productCards) {
-            if(productName.toLowerCase().equals(card.getProductName().toLowerCase())){
+            if(card.getProductName().toLowerCase().contains(productName.toLowerCase())){
                 return;
             }
         }

@@ -10,7 +10,7 @@ import ru.yandex.qatools.htmlelements.element.TypifiedElement;
  */
 public class ProductCard extends TypifiedElement {
 
-    private String nameXpath = ".//span[contains(@class,'header-text')]";
+    private String nameXpath = ".//div[@class='n-snippet-card2__title']/a";
     private String costXpath = ".//div[@class='price']";
 
     public ProductCard(WebElement wrappedElement) {
