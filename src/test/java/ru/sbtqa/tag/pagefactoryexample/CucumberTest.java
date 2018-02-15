@@ -9,9 +9,9 @@ import ru.sbtqa.tag.cucumber.TagCucumber;
  * @author sbt-svetlakov-av
  */
 @RunWith(TagCucumber.class)
-@CucumberOptions(monochrome = true, format = {"pretty"},
-        glue = {"ru.sbtqa.tag.pagefactory.stepdefs"},
+@CucumberOptions(
+        glue = {"ru.sbtqa.tag.pagefactory.stepdefs", "ru.sbtqa.tag.pagefactoryexample.stepdefs"},
         features = {"src/test/resources/features/"},
-        tags = {"@ymtest"})
+        tags = {"@sports"})
 
 public class CucumberTest {}

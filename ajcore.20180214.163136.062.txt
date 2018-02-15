@@ -1,0 +1,231 @@
+---- AspectJ Properties ---
+AspectJ Compiler 1.8.9 built on Monday Mar 14, 2016 at 21:18:16 GMT
+---- Dump Properties ---
+Dump file: ajcore.20180214.163136.062.txt
+Dump reason: org.aspectj.bridge.AbortException
+Dump on exception: true
+Dump at exit condition: abort
+---- Exception Information ---
+Message: abort trouble in: 
+io.qameta.allure.aspects.StepsAspects -- (IllegalStateException) there is no classname for invokedynamic
+there is no classname for invokedynamic
+java.lang.IllegalStateException: there is no classname for invokedynamic
+	at org.aspectj.apache.bcel.generic.InvokeDynamic.getClassName(InvokeDynamic.java:126)
+	at org.aspectj.weaver.bcel.BcelAccessForInlineMunger.openAroundAdvice(BcelAccessForInlineMunger.java:141)
+	at org.aspectj.weaver.bcel.BcelAccessForInlineMunger.munge(BcelAccessForInlineMunger.java:80)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:440)
+	at org.aspectj.weaver.bcel.BcelClassWeaver.weave(BcelClassWeaver.java:100)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1697)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveWithoutDump(BcelWeaver.java:1641)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveAndNotify(BcelWeaver.java:1406)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1159)
+	at org.aspectj.weaver.tools.WeavingAdaptor.getWovenBytes(WeavingAdaptor.java:527)
+	at org.aspectj.weaver.tools.WeavingAdaptor.weaveClass(WeavingAdaptor.java:363)
+	at org.aspectj.weaver.loadtime.Aj.preProcess(Aj.java:121)
+	at org.aspectj.weaver.loadtime.ClassPreProcessorAgentAdapter.transform(ClassPreProcessorAgentAdapter.java:54)
+	at sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:428)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at ru.sbtqa.tag.pagefactoryexample.pages.Google.ForecastPage.waitt(ForecastPage.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.commons.lang3.reflect.MethodUtils.invokeMethod(MethodUtils.java:132)
+	at org.apache.commons.lang3.reflect.MethodUtils.invokeMethod(MethodUtils.java:97)
+	at ru.sbtqa.tag.pagefactory.Page.executeMethodByTitle(Page.java:902)
+	at ru.sbtqa.tag.pagefactory.stepdefs.GenericStepDefs.userActionNoParams(GenericStepDefs.java:230)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
+	at ru.sbtqa.tag.cucumber.TagCucumber.runChild(TagCucumber.java:174)
+	at ru.sbtqa.tag.cucumber.TagCucumber.runChild(TagCucumber.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:272)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+
+org.aspectj.bridge.AbortException: trouble in: 
+io.qameta.allure.aspects.StepsAspects
+	at org.aspectj.bridge.MessageWriter.handleMessage(MessageWriter.java:47)
+	at org.aspectj.weaver.tools.WeavingAdaptor$WeavingAdaptorMessageWriter.handleMessage(WeavingAdaptor.java:797)
+	at org.aspectj.weaver.tools.WeavingAdaptor$WeavingAdaptorMessageHolder.handleMessage(WeavingAdaptor.java:742)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1723)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveWithoutDump(BcelWeaver.java:1641)
+	at org.aspectj.weaver.bcel.BcelWeaver.weaveAndNotify(BcelWeaver.java:1406)
+	at org.aspectj.weaver.bcel.BcelWeaver.weave(BcelWeaver.java:1159)
+	at org.aspectj.weaver.tools.WeavingAdaptor.getWovenBytes(WeavingAdaptor.java:527)
+	at org.aspectj.weaver.tools.WeavingAdaptor.weaveClass(WeavingAdaptor.java:363)
+	at org.aspectj.weaver.loadtime.Aj.preProcess(Aj.java:121)
+	at org.aspectj.weaver.loadtime.ClassPreProcessorAgentAdapter.transform(ClassPreProcessorAgentAdapter.java:54)
+	at sun.instrument.TransformerManager.transform(TransformerManager.java:188)
+	at sun.instrument.InstrumentationImpl.transform(InstrumentationImpl.java:428)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:763)
+	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:142)
+	at java.net.URLClassLoader.defineClass(URLClassLoader.java:467)
+	at java.net.URLClassLoader.access$100(URLClassLoader.java:73)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:368)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at ru.sbtqa.tag.pagefactoryexample.pages.Google.ForecastPage.waitt(ForecastPage.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.commons.lang3.reflect.MethodUtils.invokeMethod(MethodUtils.java:132)
+	at org.apache.commons.lang3.reflect.MethodUtils.invokeMethod(MethodUtils.java:97)
+	at ru.sbtqa.tag.pagefactory.Page.executeMethodByTitle(Page.java:902)
+	at ru.sbtqa.tag.pagefactory.stepdefs.GenericStepDefs.userActionNoParams(GenericStepDefs.java:230)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)
+	at ru.sbtqa.tag.cucumber.TagCucumber.runChild(TagCucumber.java:174)
+	at ru.sbtqa.tag.cucumber.TagCucumber.runChild(TagCucumber.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:100)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:272)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+---- System Properties ---
+java.runtime.name=Java(TM) SE Runtime Environment
+cucumber.options=--plugin io.qameta.allure.cucumberjvm.AllureCucumberJvm
+sun.boot.library.path=/home/kosteman/apps/jdk1.8.0_121/jre/lib/amd64
+java.vm.version=25.121-b13
+java.vm.vendor=Oracle Corporation
+java.vendor.url=http://java.oracle.com/
+path.separator=:
+java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg=sun.io
+user.country=US
+sun.java.launcher=SUN_STANDARD
+sun.os.patch.level=unknown
+java.vm.specification.name=Java Virtual Machine Specification
+user.dir=/home/kosteman/projects/page-factory-example
+java.runtime.version=1.8.0_121-b13
+basedir=/home/kosteman/projects/page-factory-example
+java.awt.graphicsenv=sun.awt.X11GraphicsEnvironment
+java.endorsed.dirs=/home/kosteman/apps/jdk1.8.0_121/jre/lib/endorsed
+os.arch=amd64
+surefire.real.class.path=/home/kosteman/projects/page-factory-example/target/surefire/surefirebooter8567884417503982359.jar:/home/kosteman/.m2/repository/org/aspectj/aspectjweaver/1.8.13/aspectjweaver-1.8.13.jar
+java.io.tmpdir=/tmp
+line.separator=
+
+java.vm.specification.vendor=Oracle Corporation
+os.name=Linux
+maven.ext.class.path=/home/kosteman/apps/netbeans-8.2/java/maven-nblib/netbeans-eventspy.jar
+sun.jnu.encoding=UTF-8
+java.library.path=/home/kosteman/apps/jdk1.8.0_121/jre/lib/amd64:/home/kosteman/apps/jdk1.8.0_121/jre/lib/i386::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+surefire.test.class.path=/home/kosteman/projects/page-factory-example/target/test-classes:/home/kosteman/projects/page-factory-example/target/classes:/home/kosteman/.m2/repository/ru/sbtqa/tag/page-factory/1.5-SNAPSHOT/page-factory-1.5-SNAPSHOT.jar:/home/kosteman/.m2/repository/ru/sbtqa/tag/qa-utils/1.2.4/qa-utils-1.2.4.jar:/home/kosteman/.m2/repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar:/home/kosteman/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/home/kosteman/.m2/repository/org/slf4j/slf4j-api/1.7.22/slf4j-api-1.7.22.jar:/home/kosteman/.m2/repository/org/slf4j/slf4j-log4j12/1.7.22/slf4j-log4j12-1.7.22.jar:/home/kosteman/.m2/repository/ru/sbtqa/tag/cucumber-runner/1.1-SNAPSHOT/cucumber-runner-1.1-SNAPSHOT.jar:/home/kosteman/.m2/repository/info/cukes/cucumber-junit/1.2.5/cucumber-junit-1.2.5.jar:/home/kosteman/.m2/repository/ru/sbtqa/tag/datajack/1.2.0/datajack-1.2.0.jar:/home/kosteman/.m2/repository/org/mongodb/mongo-java-driver/3.2.2/mongo-java-driver-3.2.2.jar:/home/kosteman/.m2/repository/commons-io/commons-io/2.5/commons-io-2.5.jar:/home/kosteman/.m2/repository/org/apache/poi/poi-ooxml/3.13/poi-ooxml-3.13.jar:/home/kosteman/.m2/repository/org/apache/poi/poi/3.13/poi-3.13.jar:/home/kosteman/.m2/repository/org/apache/poi/poi-ooxml-schemas/3.13/poi-ooxml-schemas-3.13.jar:/home/kosteman/.m2/repository/org/apache/xmlbeans/xmlbeans/2.6.0/xmlbeans-2.6.0.jar:/home/kosteman/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar:/home/kosteman/.m2/repository/io/qameta/allure/allure-cucumber-jvm/2.0-SNAPSHOT/allure-cucumber-jvm-2.0-SNAPSHOT.jar:/home/kosteman/.m2/repository/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5.jar:/home/kosteman/.m2/repository/info/cukes/cucumber-html/0.2.3/cucumber-html-0.2.3.jar:/home/kosteman/.m2/repository/info/cukes/cucumber-jvm-deps/1.0.5/cucumber-jvm-deps-1.0.5.jar:/home/kosteman/.m2/repository/info/cukes/gherkin/2.12.2/gherkin-2.12.2.jar:/home/kosteman/.m2/repository/io/qameta/allure/allure-java-commons/2.0-SNAPSHOT/allure-java-commons-2.0-SNAPSHOT.jar:/home/kosteman/.m2/repository/io/qameta/allure/allure2-model-api/1.0-BETA6/allure2-model-api-1.0-BETA6.jar:/home/kosteman/.m2/repository/io/qameta/allure/allure2-model-pojo/1.0-BETA6/allure2-model-pojo-1.0-BETA6.jar:/home/kosteman/.m2/repository/org/apache/tika/tika-core/1.14/tika-core-1.14.jar:/home/kosteman/.m2/repository/io/qameta/allure/allure2-model-jackson/1.0-BETA6/allure2-model-jackson-1.0-BETA6.jar:/home/kosteman/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.7.0/jackson-module-jaxb-annotations-2.7.0.jar:/home/kosteman/.m2/repository/org/aspectj/aspectjrt/1.8.10/aspectjrt-1.8.10.jar:/home/kosteman/.m2/repository/org/jooq/joor/0.9.6/joor-0.9.6.jar:/home/kosteman/.m2/repository/ru/sbtqa/tag/video-recorder/1.0.6/video-recorder-1.0.6.jar:/home/kosteman/.m2/repository/ru/sbtqa/monte-media/1.1.0-JAVA7/monte-media-1.1.0-JAVA7.jar:/home/kosteman/.m2/repository/ru/sbtqa/htmlelements/htmlelements-java/1.17-JAVA7/htmlelements-java-1.17-JAVA7.jar:/home/kosteman/.m2/repository/org/seleniumhq/selenium/selenium-java/2.53.0/selenium-java-2.53.0.jar:/home/kosteman/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/2.53.0/selenium-edge-driver-2.53.0.jar:/home/kosteman/.m2/repository/org/seleniumhq/selenium/selenium-leg-rc/2.53.0/selenium-leg-rc-2.53.0.jar:/home/kosteman/.m2/repository/org/seleniumhq/selenium/selenium-support/2.53.1/selenium-support-2.53.1.jar:/home/kosteman/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/2.53.1/selenium-remote-driver-2.53.1.jar:/home/kosteman/.m2/repository/org/seleniumhq/selenium/selenium-api/2.53.1/selenium-api-2.53.1.jar:/home/kosteman/.m2/repository/io/appium/java-client/4.1.2/java-client-4.1.2.jar:/home/kosteman/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar:/home/kosteman/.m2/repository/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2.jar:/home/kosteman/.m2/repository/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4.jar:/home/kosteman/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/kosteman/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/home/kosteman/.m2/repository/commons-validator/commons-validator/1.5.1/commons-validator-1.5.1.jar:/home/kosteman/.m2/repository/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2.jar:/home/kosteman/.m2/repository/commons-digester/commons-digester/1.8.1/commons-digester-1.8.1.jar:/home/kosteman/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/home/kosteman/.m2/repository/cglib/cglib-nodep/3.2.4/cglib-nodep-3.2.4.jar:/home/kosteman/.m2/repository/org/springframework/spring-context/4.3.2.RELEASE/spring-context-4.3.2.RELEASE.jar:/home/kosteman/.m2/repository/org/springframework/spring-aop/4.3.2.RELEASE/spring-aop-4.3.2.RELEASE.jar:/home/kosteman/.m2/repository/org/springframework/spring-beans/4.3.2.RELEASE/spring-beans-4.3.2.RELEASE.jar:/home/kosteman/.m2/repository/org/springframework/spring-core/4.3.2.RELEASE/spring-core-4.3.2.RELEASE.jar:/home/kosteman/.m2/repository/org/springframework/spring-expression/4.3.2.RELEASE/spring-expression-4.3.2.RELEASE.jar:/home/kosteman/.m2/repository/org/aspectj/aspectjweaver/1.8.9/aspectjweaver-1.8.9.jar:/home/kosteman/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/kosteman/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/kosteman/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/2.53.1/selenium-chrome-driver-2.53.1.jar:/home/kosteman/.m2/repository/net/lightbody/bmp/browsermob-core/2.1.5/browsermob-core-2.1.5.jar:/home/kosteman/.m2/repository/net/lightbody/bmp/littleproxy/1.1.0-beta-bmp-17/littleproxy-1.1.0-beta-bmp-17.jar:/home/kosteman/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.8.9/jackson-core-2.8.9.jar:/home/kosteman/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.8.9/jackson-databind-2.8.9.jar:/home/kosteman/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.8.9/jackson-annotations-2.8.9.jar:/home/kosteman/.m2/repository/dnsjava/dnsjava/2.1.8/dnsjava-2.1.8.jar:/home/kosteman/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.25/jcl-over-slf4j-1.7.25.jar:/home/kosteman/.m2/repository/com/jcraft/jzlib/1.1.3/jzlib-1.1.3.jar:/home/kosteman/.m2/repository/io/netty/netty-all/4.0.51.Final/netty-all-4.0.51.Final.jar:/home/kosteman/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.58/bcprov-jdk15on-1.58.jar:/home/kosteman/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.58/bcpkix-jdk15on-1.58.jar:/home/kosteman/.m2/repository/net/lightbody/bmp/mitm/2.1.5/mitm-2.1.5.jar:/home/kosteman/.m2/repository/net/lightbody/bmp/browsermob-core-littleproxy/2.1.0-beta-6/browsermob-core-littleproxy-2.1.0-beta-6.jar:/home/kosteman/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/2.53.1/selenium-firefox-driver-2.53.1.jar:/home/kosteman/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/home/kosteman/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/2.53.1/selenium-safari-driver-2.53.1.jar:/home/kosteman/.m2/repository/io/netty/netty/3.5.7.Final/netty-3.5.7.Final.jar:/home/kosteman/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/2.53.0/selenium-ie-driver-2.53.0.jar:/home/kosteman/.m2/repository/net/java/dev/jna/jna/4.1.0/jna-4.1.0.jar:/home/kosteman/.m2/repository/net/java/dev/jna/jna-platform/4.1.0/jna-platform-4.1.0.jar:/home/kosteman/.m2/repository/org/reflections/reflections/0.9.10/reflections-0.9.10.jar:/home/kosteman/.m2/repository/org/javassist/javassist/3.19.0-GA/javassist-3.19.0-GA.jar:/home/kosteman/.m2/repository/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.jar:/home/kosteman/.m2/repository/org/apache/maven/maven-project/2.0.10/maven-project-2.0.10.jar:/home/kosteman/.m2/repository/org/apache/maven/maven-settings/2.0.10/maven-settings-2.0.10.jar:/home/kosteman/.m2/repository/org/apache/maven/maven-profile/2.0.10/maven-profile-2.0.10.jar:/home/kosteman/.m2/repository/org/apache/maven/maven-model/2.0.10/maven-model-2.0.10.jar:/home/kosteman/.m2/repository/org/apache/maven/maven-artifact-manager/2.0.10/maven-artifact-manager-2.0.10.jar:/home/kosteman/.m2/repository/org/apache/maven/maven-repository-metadata/2.0.10/maven-repository-metadata-2.0.10.jar:/home/kosteman/.m2/repository/org/apache/maven/wagon/wagon-provider-api/1.0-beta-2/wagon-provider-api-1.0-beta-2.jar:/home/kosteman/.m2/repository/org/apache/maven/maven-plugin-registry/2.0.10/maven-plugin-registry-2.0.10.jar:/home/kosteman/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.1/plexus-interpolation-1.1.jar:/home/kosteman/.m2/repository/org/codehaus/plexus/plexus-utils/1.5.5/plexus-utils-1.5.5.jar:/home/kosteman/.m2/repository/org/apache/maven/maven-artifact/2.0.10/maven-artifact-2.0.10.jar:/home/kosteman/.m2/repository/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.jar:/home/kosteman/.m2/repository/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.jar:/home/kosteman/.m2/repository/com/google/guava/guava/18.0/guava-18.0.jar:/home/kosteman/.m2/repository/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5.jar:
+java.specification.name=Java Platform API Specification
+java.class.version=52.0
+sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+os.version=4.4.0-109-generic
+user.home=/home/kosteman
+user.timezone=Asia/Krasnoyarsk
+java.awt.printerjob=sun.print.PSPrinterJob
+file.encoding=UTF-8
+java.specification.version=1.8
+java.class.path=/home/kosteman/projects/page-factory-example/target/test-classes:/home/kosteman/projects/page-factory-example/target/classes:/home/kosteman/.m2/repository/ru/sbtqa/tag/page-factory/1.5-SNAPSHOT/page-factory-1.5-SNAPSHOT.jar:/home/kosteman/.m2/repository/ru/sbtqa/tag/qa-utils/1.2.4/qa-utils-1.2.4.jar:/home/kosteman/.m2/repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar:/home/kosteman/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/home/kosteman/.m2/repository/org/slf4j/slf4j-api/1.7.22/slf4j-api-1.7.22.jar:/home/kosteman/.m2/repository/org/slf4j/slf4j-log4j12/1.7.22/slf4j-log4j12-1.7.22.jar:/home/kosteman/.m2/repository/ru/sbtqa/tag/cucumber-runner/1.1-SNAPSHOT/cucumber-runner-1.1-SNAPSHOT.jar:/home/kosteman/.m2/repository/info/cukes/cucumber-junit/1.2.5/cucumber-junit-1.2.5.jar:/home/kosteman/.m2/repository/ru/sbtqa/tag/datajack/1.2.0/datajack-1.2.0.jar:/home/kosteman/.m2/repository/org/mongodb/mongo-java-driver/3.2.2/mongo-java-driver-3.2.2.jar:/home/kosteman/.m2/repository/commons-io/commons-io/2.5/commons-io-2.5.jar:/home/kosteman/.m2/repository/org/apache/poi/poi-ooxml/3.13/poi-ooxml-3.13.jar:/home/kosteman/.m2/repository/org/apache/poi/poi/3.13/poi-3.13.jar:/home/kosteman/.m2/repository/org/apache/poi/poi-ooxml-schemas/3.13/poi-ooxml-schemas-3.13.jar:/home/kosteman/.m2/repository/org/apache/xmlbeans/xmlbeans/2.6.0/xmlbeans-2.6.0.jar:/home/kosteman/.m2/repository/stax/stax-api/1.0.1/stax-api-1.0.1.jar:/home/kosteman/.m2/repository/io/qameta/allure/allure-cucumber-jvm/2.0-SNAPSHOT/allure-cucumber-jvm-2.0-SNAPSHOT.jar:/home/kosteman/.m2/repository/info/cukes/cucumber-core/1.2.5/cucumber-core-1.2.5.jar:/home/kosteman/.m2/repository/info/cukes/cucumber-html/0.2.3/cucumber-html-0.2.3.jar:/home/kosteman/.m2/repository/info/cukes/cucumber-jvm-deps/1.0.5/cucumber-jvm-deps-1.0.5.jar:/home/kosteman/.m2/repository/info/cukes/gherkin/2.12.2/gherkin-2.12.2.jar:/home/kosteman/.m2/repository/io/qameta/allure/allure-java-commons/2.0-SNAPSHOT/allure-java-commons-2.0-SNAPSHOT.jar:/home/kosteman/.m2/repository/io/qameta/allure/allure2-model-api/1.0-BETA6/allure2-model-api-1.0-BETA6.jar:/home/kosteman/.m2/repository/io/qameta/allure/allure2-model-pojo/1.0-BETA6/allure2-model-pojo-1.0-BETA6.jar:/home/kosteman/.m2/repository/org/apache/tika/tika-core/1.14/tika-core-1.14.jar:/home/kosteman/.m2/repository/io/qameta/allure/allure2-model-jackson/1.0-BETA6/allure2-model-jackson-1.0-BETA6.jar:/home/kosteman/.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.7.0/jackson-module-jaxb-annotations-2.7.0.jar:/home/kosteman/.m2/repository/org/aspectj/aspectjrt/1.8.10/aspectjrt-1.8.10.jar:/home/kosteman/.m2/repository/org/jooq/joor/0.9.6/joor-0.9.6.jar:/home/kosteman/.m2/repository/ru/sbtqa/tag/video-recorder/1.0.6/video-recorder-1.0.6.jar:/home/kosteman/.m2/repository/ru/sbtqa/monte-media/1.1.0-JAVA7/monte-media-1.1.0-JAVA7.jar:/home/kosteman/.m2/repository/ru/sbtqa/htmlelements/htmlelements-java/1.17-JAVA7/htmlelements-java-1.17-JAVA7.jar:/home/kosteman/.m2/repository/org/seleniumhq/selenium/selenium-java/2.53.0/selenium-java-2.53.0.jar:/home/kosteman/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/2.53.0/selenium-edge-driver-2.53.0.jar:/home/kosteman/.m2/repository/org/seleniumhq/selenium/selenium-leg-rc/2.53.0/selenium-leg-rc-2.53.0.jar:/home/kosteman/.m2/repository/org/seleniumhq/selenium/selenium-support/2.53.1/selenium-support-2.53.1.jar:/home/kosteman/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/2.53.1/selenium-remote-driver-2.53.1.jar:/home/kosteman/.m2/repository/org/seleniumhq/selenium/selenium-api/2.53.1/selenium-api-2.53.1.jar:/home/kosteman/.m2/repository/io/appium/java-client/4.1.2/java-client-4.1.2.jar:/home/kosteman/.m2/repository/com/google/code/gson/gson/2.7/gson-2.7.jar:/home/kosteman/.m2/repository/org/apache/httpcomponents/httpclient/4.5.2/httpclient-4.5.2.jar:/home/kosteman/.m2/repository/org/apache/httpcomponents/httpcore/4.4.4/httpcore-4.4.4.jar:/home/kosteman/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/kosteman/.m2/repository/commons-codec/commons-codec/1.9/commons-codec-1.9.jar:/home/kosteman/.m2/repository/commons-validator/commons-validator/1.5.1/commons-validator-1.5.1.jar:/home/kosteman/.m2/repository/commons-beanutils/commons-beanutils/1.9.2/commons-beanutils-1.9.2.jar:/home/kosteman/.m2/repository/commons-digester/commons-digester/1.8.1/commons-digester-1.8.1.jar:/home/kosteman/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar:/home/kosteman/.m2/repository/cglib/cglib-nodep/3.2.4/cglib-nodep-3.2.4.jar:/home/kosteman/.m2/repository/org/springframework/spring-context/4.3.2.RELEASE/spring-context-4.3.2.RELEASE.jar:/home/kosteman/.m2/repository/org/springframework/spring-aop/4.3.2.RELEASE/spring-aop-4.3.2.RELEASE.jar:/home/kosteman/.m2/repository/org/springframework/spring-beans/4.3.2.RELEASE/spring-beans-4.3.2.RELEASE.jar:/home/kosteman/.m2/repository/org/springframework/spring-core/4.3.2.RELEASE/spring-core-4.3.2.RELEASE.jar:/home/kosteman/.m2/repository/org/springframework/spring-expression/4.3.2.RELEASE/spring-expression-4.3.2.RELEASE.jar:/home/kosteman/.m2/repository/org/aspectj/aspectjweaver/1.8.9/aspectjweaver-1.8.9.jar:/home/kosteman/.m2/repository/junit/junit/4.12/junit-4.12.jar:/home/kosteman/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/kosteman/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/2.53.1/selenium-chrome-driver-2.53.1.jar:/home/kosteman/.m2/repository/net/lightbody/bmp/browsermob-core/2.1.5/browsermob-core-2.1.5.jar:/home/kosteman/.m2/repository/net/lightbody/bmp/littleproxy/1.1.0-beta-bmp-17/littleproxy-1.1.0-beta-bmp-17.jar:/home/kosteman/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.8.9/jackson-core-2.8.9.jar:/home/kosteman/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.8.9/jackson-databind-2.8.9.jar:/home/kosteman/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.8.9/jackson-annotations-2.8.9.jar:/home/kosteman/.m2/repository/dnsjava/dnsjava/2.1.8/dnsjava-2.1.8.jar:/home/kosteman/.m2/repository/org/slf4j/jcl-over-slf4j/1.7.25/jcl-over-slf4j-1.7.25.jar:/home/kosteman/.m2/repository/com/jcraft/jzlib/1.1.3/jzlib-1.1.3.jar:/home/kosteman/.m2/repository/io/netty/netty-all/4.0.51.Final/netty-all-4.0.51.Final.jar:/home/kosteman/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.58/bcprov-jdk15on-1.58.jar:/home/kosteman/.m2/repository/org/bouncycastle/bcpkix-jdk15on/1.58/bcpkix-jdk15on-1.58.jar:/home/kosteman/.m2/repository/net/lightbody/bmp/mitm/2.1.5/mitm-2.1.5.jar:/home/kosteman/.m2/repository/net/lightbody/bmp/browsermob-core-littleproxy/2.1.0-beta-6/browsermob-core-littleproxy-2.1.0-beta-6.jar:/home/kosteman/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/2.53.1/selenium-firefox-driver-2.53.1.jar:/home/kosteman/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/home/kosteman/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/2.53.1/selenium-safari-driver-2.53.1.jar:/home/kosteman/.m2/repository/io/netty/netty/3.5.7.Final/netty-3.5.7.Final.jar:/home/kosteman/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/2.53.0/selenium-ie-driver-2.53.0.jar:/home/kosteman/.m2/repository/net/java/dev/jna/jna/4.1.0/jna-4.1.0.jar:/home/kosteman/.m2/repository/net/java/dev/jna/jna-platform/4.1.0/jna-platform-4.1.0.jar:/home/kosteman/.m2/repository/org/reflections/reflections/0.9.10/reflections-0.9.10.jar:/home/kosteman/.m2/repository/org/javassist/javassist/3.19.0-GA/javassist-3.19.0-GA.jar:/home/kosteman/.m2/repository/com/google/code/findbugs/annotations/2.0.1/annotations-2.0.1.jar:/home/kosteman/.m2/repository/org/apache/maven/maven-project/2.0.10/maven-project-2.0.10.jar:/home/kosteman/.m2/repository/org/apache/maven/maven-settings/2.0.10/maven-settings-2.0.10.jar:/home/kosteman/.m2/repository/org/apache/maven/maven-profile/2.0.10/maven-profile-2.0.10.jar:/home/kosteman/.m2/repository/org/apache/maven/maven-model/2.0.10/maven-model-2.0.10.jar:/home/kosteman/.m2/repository/org/apache/maven/maven-artifact-manager/2.0.10/maven-artifact-manager-2.0.10.jar:/home/kosteman/.m2/repository/org/apache/maven/maven-repository-metadata/2.0.10/maven-repository-metadata-2.0.10.jar:/home/kosteman/.m2/repository/org/apache/maven/wagon/wagon-provider-api/1.0-beta-2/wagon-provider-api-1.0-beta-2.jar:/home/kosteman/.m2/repository/org/apache/maven/maven-plugin-registry/2.0.10/maven-plugin-registry-2.0.10.jar:/home/kosteman/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.1/plexus-interpolation-1.1.jar:/home/kosteman/.m2/repository/org/codehaus/plexus/plexus-utils/1.5.5/plexus-utils-1.5.5.jar:/home/kosteman/.m2/repository/org/apache/maven/maven-artifact/2.0.10/maven-artifact-2.0.10.jar:/home/kosteman/.m2/repository/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.jar:/home/kosteman/.m2/repository/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.jar:/home/kosteman/.m2/repository/com/google/guava/guava/18.0/guava-18.0.jar:/home/kosteman/.m2/repository/info/cukes/cucumber-java/1.2.5/cucumber-java-1.2.5.jar:
+user.name=kosteman
+java.vm.specification.version=1.8
+sun.java.command=/home/kosteman/projects/page-factory-example/target/surefire/surefirebooter8567884417503982359.jar /home/kosteman/projects/page-factory-example/target/surefire 2018-02-14T16-31-13_071-jvmRun1 surefire7782230408687222371tmp surefire_04489847594172725225tmp
+java.home=/home/kosteman/apps/jdk1.8.0_121/jre
+sun.arch.data.model=64
+user.language=en
+java.specification.vendor=Oracle Corporation
+awt.toolkit=sun.awt.X11.XToolkit
+java.vm.info=mixed mode
+java.version=1.8.0_121
+java.ext.dirs=/home/kosteman/apps/jdk1.8.0_121/jre/lib/ext:/usr/java/packages/lib/ext
+webdriver.chrome.driver=/home/kosteman/projects/page-factory-example/src/test/resources/webdrivers/chromedriver
+sun.boot.class.path=/home/kosteman/apps/jdk1.8.0_121/jre/lib/resources.jar:/home/kosteman/apps/jdk1.8.0_121/jre/lib/rt.jar:/home/kosteman/apps/jdk1.8.0_121/jre/lib/sunrsasign.jar:/home/kosteman/apps/jdk1.8.0_121/jre/lib/jsse.jar:/home/kosteman/apps/jdk1.8.0_121/jre/lib/jce.jar:/home/kosteman/apps/jdk1.8.0_121/jre/lib/charsets.jar:/home/kosteman/apps/jdk1.8.0_121/jre/lib/jfr.jar:/home/kosteman/apps/jdk1.8.0_121/jre/classes
+java.vendor=Oracle Corporation
+localRepository=/home/kosteman/.m2/repository
+file.separator=/
+java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+sun.io.unicode.encoding=UnicodeLittle
+sun.cpu.endian=little
+sun.cpu.isalist=
+---- Command Line ---
+Empty
+---- Full Classpath ---
+Empty
+---- Compiler Messages ---
+Empty
