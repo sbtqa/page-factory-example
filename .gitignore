@@ -1,3 +1,4 @@
 target/
+allure*
 .idea/
 *.iml
