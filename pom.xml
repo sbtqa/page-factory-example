@@ -48,11 +48,10 @@
         </plugins>
     </build>
     <reporting>
-        <excludeDefaults>true</excludeDefaults>
         <plugins>
             <plugin>
                 <groupId>io.qameta.allure</groupId>
-                <artifactId>allure-maven-plugin</artifactId>
+                <artifactId>allure-maven</artifactId>
                 <version>2.9</version>
             </plugin>
         </plugins>
