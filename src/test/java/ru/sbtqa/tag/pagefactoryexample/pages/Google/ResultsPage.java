@@ -13,9 +13,6 @@ import ru.yandex.qatools.htmlelements.loader.decorator.HtmlElementLocatorFactory
 
 import java.util.List;
 
-/**
- * Created by sbt-svetlakov-av on 03.05.17.
- */
 @PageEntry(title = "Результаты поиска")
 public class ResultsPage extends Page {
 

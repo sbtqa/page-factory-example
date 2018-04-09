@@ -7,9 +7,6 @@ import ru.yandex.qatools.htmlelements.annotations.Name;
 import ru.yandex.qatools.htmlelements.element.HtmlElement;
 import ru.yandex.qatools.htmlelements.element.TextInput;
 
-/**
- * Created by sbt-svetlakov-av on 12.05.17.
- */
 @Name("Меню поиска")
 @FindBy(xpath = "//div[@class='header2__main']")
 public class HeaderBlock extends HtmlElement{
