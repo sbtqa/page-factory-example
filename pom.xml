@@ -10,7 +10,7 @@
     <dependency>
       <groupId>ru.sbtqa.tag</groupId>
       <artifactId>page-factory</artifactId>
-      <version>1.8.1</version>
+      <version>1.9.2</version>
     </dependency>
   </dependencies>
   <properties>
