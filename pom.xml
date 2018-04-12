@@ -12,6 +12,11 @@
       <artifactId>page-factory</artifactId>
       <version>1.9.2</version>
     </dependency>
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-cucumber-jvm</artifactId>
+      <version>2.6.0</version>
+    </dependency>
   </dependencies>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,6 +27,67 @@
   <build>
     <plugins>
       <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.github.temyers</groupId>
+        <artifactId>cucumber-jvm-parallel-plugin</artifactId>
+        <version>4.2.0</version>
+        <executions>
+          <execution>
+            <id>generateRunners</id>
+            <phase>validate</phase>
+            <goals>
+              <goal>generateRunners</goal>
+            </goals>
+            <configuration>
+              <!-- Mandatory -->
+              <glue>
+                <package>ru.sbtqa.tag.pagefactory.stepdefs</package>
+                <package>ru.sbtqa.tag.pagefactory2example.elements.jdi.stepdefs</package>
+                <package>ru.sbtqa.tag.pagefactory.htmlstepdefs</package>
+              </glue>
+              <!-- These are the default values -->
+              <!-- Where to output the generated tests -->
+              <outputDirectory>${project.build.directory}/generated-test-sources/cucumber</outputDirectory>
+              <!-- The diectory, which must be in the root of the runtime classpath, containing your feature files.  -->
+              <featuresDirectory>src/test/resources/features/</featuresDirectory>
+              <!-- Directory where the cucumber report files shall be written  -->
+              <cucumberOutputDir>target/cucumber-parallel</cucumberOutputDir>
+              <!-- comma separated list of output formats -->
+              <format>json,html,rerun</format>
+              <!-- CucumberOptions.strict property -->
+              <strict>true</strict>
+              <!-- CucumberOptions.monochrome property -->
+              <monochrome>true</monochrome>
+              <!-- The tags to run, maps to CucumberOptions.tags property -->
+              <!--<tags>-->
+              <!--<tag>-->
+              <!--~@html-elements-->
+              <!--</tag>-->
+              <!--</tags>-->
+              <!-- If set to true, only feature files containing the required tags shall be generated. -->
+              <!-- Excluded tags (~@notMe) are ignored. -->
+              <!--<filterFeaturesByTags>false</filterFeaturesByTags>-->
+              <!-- Generate TestNG runners instead of JUnit ones. -->
+              <useTestNG>false</useTestNG>
+              <!-- The naming scheme to use for the generated test classes.  One of 'simple' or 'feature-title' -->
+              <namingScheme>simple</namingScheme>
+              <!-- The class naming pattern to use.  Only required/used if naming scheme is 'pattern'.-->
+              <namingPattern>Parallel{c}IT</namingPattern>
+              <!--<useJUnitReRun>true</useJUnitReRun>-->
+              <!--<retryCount>2</retryCount>-->
+              <parallelScheme>SCENARIO</parallelScheme>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.20</version>
@@ -29,10 +95,18 @@
           <junitArtifactName>junit:junit</junitArtifactName>
           <testFailureIgnore>false</testFailureIgnore>
           <skipTests>false</skipTests>
+          <additionalClasspathElements>
+            <additionalClasspathElement>resources</additionalClasspathElement>
+          </additionalClasspathElements>
           <argLine>
             -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
-            -Dcucumber.options="--plugin ru.sbtqa.tag.pagefactory.support.TagPFAllureReporter --plugin pretty"
+            -Dcucumber.options="--plugin io.qameta.allure.cucumber2jvm.AllureCucumber2Jvm --plugin pretty"
           </argLine>
+          <forkCount>5</forkCount>
+          <reuseForks>true</reuseForks>
+          <includes>
+            <include>**/*IT.class</include>
+          </includes>
         </configuration>
         <dependencies>
           <dependency>
@@ -41,11 +115,6 @@
             <version>${aspectj.version}</version>
           </dependency>
         </dependencies>
-      </plugin>
-      <plugin>
-        <groupId>io.qameta.allure</groupId>
-        <artifactId>allure-maven</artifactId>
-        <version>2.9</version>
       </plugin>
     </plugins>
   </build>
