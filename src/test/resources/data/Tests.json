@@ -1,0 +1,15 @@
+{
+  "main": {
+    "url": "http://google.ru"
+  },
+  "data": [
+    {
+      "ref": {
+        "value": {
+          "collection": "Data",
+          "path": "main.name1"
+        }
+      }
+    }
+  ]
+}
