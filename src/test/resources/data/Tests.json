@@ -4,10 +4,10 @@
   },
   "data": [
     {
-      "ref": {
+      "ссылка на продукт 1": {
         "value": {
           "collection": "Data",
-          "path": "main.name1"
+          "path": "main.продукт 1"
         }
       }
     }
