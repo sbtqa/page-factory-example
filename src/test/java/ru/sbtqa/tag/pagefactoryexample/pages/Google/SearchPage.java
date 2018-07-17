@@ -43,6 +43,5 @@ public class SearchPage extends Page {
     public void startSearching(String searchText){
         search.sendKeys(searchText);
         searchLoupe.click();
-//        search.sendKeys(Keys.ENTER);
     }
 }
