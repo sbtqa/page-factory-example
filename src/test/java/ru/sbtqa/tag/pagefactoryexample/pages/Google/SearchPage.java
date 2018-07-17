@@ -1,6 +1,6 @@
 package ru.sbtqa.tag.pagefactoryexample.pages.Google;
 
-import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import ru.sbtqa.tag.pagefactory.Page;
 import ru.sbtqa.tag.pagefactory.annotations.ActionTitle;
@@ -30,9 +30,9 @@ public class SearchPage extends Page {
     public Button searchAtGoogle;
 
     @ElementTitle("Поиск")
-    @FindBy(name = "btnG")
+    @FindBy(name = "btnK")
     @RedirectsTo(page = ResultsPage.class)
-    public Button searchLoupe;
+    public WebElement searchLoupe;
 
     public SearchPage(){
         PageFactory.initElements(new HtmlElementDecorator(
@@ -42,6 +42,6 @@ public class SearchPage extends Page {
     @ActionTitle("ищет")
     public void startSearching(String searchText){
         search.sendKeys(searchText);
-        search.sendKeys(Keys.ENTER);
+        searchLoupe.click();
     }
 }

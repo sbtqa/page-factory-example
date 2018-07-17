@@ -1,0 +1,15 @@
+{
+  "main": {
+    "url": "http://google.ru"
+  },
+  "data": [
+    {
+      "ссылка на продукт 1": {
+        "value": {
+          "collection": "Data",
+          "path": "main.продукт 1"
+        }
+      }
+    }
+  ]
+}
