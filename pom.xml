@@ -8,9 +8,9 @@
   <name>page-factory-example</name>
     <dependencies>
       <dependency>
-        <groupId>${project.groupId}</groupId>
+        <groupId>ru.sbtqa.tag</groupId>
         <artifactId>page-factory</artifactId>
-        <version>1.11-SNAPSHOT</version>
+        <version>1.12.0</version>
       </dependency>
     </dependencies>
   <properties>
